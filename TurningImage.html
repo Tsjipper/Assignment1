@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title> Turning image</title>
+    </head>
+    <body>
+        <h1>De wielen van de bus gaan</h1>
+                <section>
+                    <button id="button">Rond en rond</button>
+                    <button id="checkbtn"> Staat ie weer recht?</button>
+                    <button id="nextwheel"> Een ander wiel</button>
+                </section>
+         <img id="img" width="300px" height=300px src="http://i155.photobucket.com/albums/s319/propceeper/CIMG5878.jpg"/>
+         <h3>Tsjip van der Nat #10437711</h3>
+    <script>
+        document.getElementById("button").onclick = function(){
+    var curr_value = document.getElementById('img').style.transform;
+    var new_value = "rotate(90deg)";
+    
+    if(curr_value !== ""){
+        var new_rotate = parseInt(curr_value.replace("rotate(","").replace(")","")) + 90;
+        new_value = "rotate(" + new_rotate + "deg)";
+
+    }
+    document.getElementById('img').style.transform = new_value;
+};
+        
+    </script>
+    </body>
+</html>    
